@@ -1,10 +1,11 @@
-let inputs, inputContainers, form, invalidTexts;
+let inputs, inputContainers, form, invalidTexts, icons;
 
 function init() {
     form = document.querySelector('form');
     inputs = document.querySelectorAll('input');
     inputContainers = document.querySelectorAll('.input-container');
     invalidTexts = document.querySelectorAll('.invalid-text');
+    icons = document.querySelectorAll('.icon-error');
 
     inputs.forEach((element, index) => {
         element.addEventListener('focus', (event) => onFocus(event, index));
@@ -16,6 +17,7 @@ function init() {
 function onFocus(event, index) {
     inputContainers[index].style.border = '1px solid #777777';
     invalidTexts[index].innerHTML = '';
+    icons[index].style.visibility = 'hidden';
 }
 
 function onBlur(event, index) {
@@ -32,6 +34,7 @@ function validationCheck(event) {
         isValid = false;
         inputContainers[2].style.border = '2px solid hsl(0, 100%, 74%)';
         invalidTexts[2].innerHTML = 'Looks like this is not an email';
+        icons[2].style.visibility = 'visible';
     }
 
     inputs.forEach((input, index) => {
@@ -39,6 +42,7 @@ function validationCheck(event) {
             isValid = false;
             inputContainers[index].style.border = '2px solid hsl(0, 100%, 74%)';
             invalidTexts[index].innerHTML = inputs[index].placeholder + ' cannot be empty';
+            icons[index].style.visibility = 'visible';
         }
     });
 

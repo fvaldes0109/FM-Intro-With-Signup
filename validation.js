@@ -25,6 +25,15 @@ function onBlur(event, index) {
 function validationCheck(event) {
     event.preventDefault();
     let isValid = true;
+    
+    const email = document.getElementById('email');
+    const text = email.value;
+    if (!text.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+        isValid = false;
+        inputContainers[2].style.border = '2px solid hsl(0, 100%, 74%)';
+        invalidTexts[2].innerHTML = 'Looks like this is not an email';
+    }
+
     inputs.forEach((input, index) => {
         if (input.value.trim() == '') {
             isValid = false;

@@ -55,6 +55,10 @@ aside {
     font-family: Poppins-600;
 }
 
+.row {
+    margin: 15px 0;
+}
+
 #form-container {
     margin: 20px 0;
     padding: 10px;
@@ -66,7 +70,7 @@ aside {
 .input-container {
     border: 1px solid hsl(245, 21%, 88%);
     padding: 15px 5%;
-    margin: 15px 5%;
+    margin: 0 5%;
     display: flex;
     border-radius: 5px;
 }

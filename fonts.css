@@ -17,3 +17,8 @@
     font-family: Poppins-700;
     src: url('./fonts/Poppins/Poppins-Bold.ttf');
 }
+
+@font-face {
+    font-family: Poppins-400-Italic;
+    src: url('./fonts/Poppins/Poppins-Italic.ttf');
+}

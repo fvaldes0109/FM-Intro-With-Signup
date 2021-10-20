@@ -83,6 +83,18 @@ input {
     margin: 0 1%;
 }
 
+input:invalid {
+    border: 1px solid green;
+}
+
+.invalid-text {
+    float: right;
+    margin: 5px 5%;
+    font-size: 11px;
+    color:hsl(0, 100%, 74%);
+    font-family: Poppins-400-Italic;
+}
+
 .icon-error {
     width: 23px;
     visibility: hidden;
@@ -115,4 +127,8 @@ button:active {
     text-decoration: none;
     color: hsl(0, 100%, 74%);
     font-family: Poppins-700;
+}
+
+.close {
+    clear: both;
 }

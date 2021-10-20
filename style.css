@@ -132,3 +132,24 @@ button:active {
 .close {
     clear: both;
 }
+
+@media(max-width: 720px) {
+    body {
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0 2.5%;
+        margin: 80px 0 0px;
+    }
+
+    section {
+        max-width: 350px;
+    }
+
+    aside {
+        margin: 40px 0;
+        padding: 0;
+    }
+}
